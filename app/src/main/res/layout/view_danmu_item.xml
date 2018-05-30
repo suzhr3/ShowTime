@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/user_headPic"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/default_head_pic"/>
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/chat_content"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/user_headPic"
+        android:text="昵称"
+        android:textColor="#23BE9F"
+        android:textSize="12sp" />
+    <TextView
+        android:id="@+id/chat_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/user_headPic"
+        android:layout_toRightOf="@id/user_headPic"
+        android:background="@drawable/round_bkg_small"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:maxWidth="200dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="聊天内容"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"/>
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edu.sysu.showtime.customview.SizeChangeRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/size_change_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.sysu.showtime.watcher.WatcherLiveActivity">
+
+    <com.tencent.ilivesdk.view.AVRootView
+        android:id="@+id/avRootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <edu.sysu.showtime.title.TitleView
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <edu.sysu.showtime.customview.BottomControlView
+        android:id="@+id/bottom_control_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+    <edu.sysu.showtime.customview.ChatView
+        android:id="@+id/chat_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+    <tyrantgit.widget.HeartLayout
+        android:id="@+id/heartLayout"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+
+    <edu.sysu.showtime.customview.ChatMsgListView
+        android:id="@+id/chat_msg_list_view"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_above="@id/chat_view"/>
+
+    <edu.sysu.showtime.customview.DanmuView
+        android:id="@+id/danmu_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/chat_msg_list_view"/>
+
+    <edu.sysu.showtime.customview.GiftDanmuRepeatView
+        android:id="@+id/gift_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/chat_msg_list_view"
+        android:layout_marginBottom="40dp"/>
+
+    <edu.sysu.showtime.customview.GiftFullView
+        android:id="@+id/gift_full_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</edu.sysu.showtime.customview.SizeChangeRelativeLayout>

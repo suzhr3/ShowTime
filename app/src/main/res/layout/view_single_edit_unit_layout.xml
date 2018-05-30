@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="1dp"
+              android:background="#fff"
+              android:gravity="center_vertical"
+              android:minHeight="55dp"
+              android:orientation="horizontal"
+              android:padding="5dp">
+
+    <!-- 这里设置第一个TextView的宽度为0dp以及权重为1，而后面的TextView和ImageView的权重都没声明，
+        就默认这个TextView会霸占完整个父布局LinearLayout的宽度，而只给后面的TextView和ImageView保留
+        wrap_content的宽度，因此实现起来的效果就是使得后面的TextView和ImageView始终保持最右对齐 -->
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+
+        android:layout_height="wrap_content"
+        android:drawablePadding="5dp"
+        android:drawableLeft="@drawable/ic_info_nickname"
+        android:gravity="center_vertical"
+        android:text="昵称"
+        android:textColor="#333"/>
+    <TextView
+        android:id="@+id/value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:maxWidth="300dp"/>
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_right_arrow"/>
+</LinearLayout>
+

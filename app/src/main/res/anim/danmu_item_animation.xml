@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="5000"
+    android:fromXDelta="100%p"
+    android:toXDelta="-100%">
+    <!-- 实现弹幕从屏幕右方（相对应父布局100%的地方）进入，然后从屏幕左方移出（相对于弹幕起始位置-100%的地方）-->
+
+</translate>

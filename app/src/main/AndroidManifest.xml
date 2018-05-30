@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="edu.sysu.showtime">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+        android:name=".APP"
+        android:allowBackup="true"
+        android:icon="@mipmap/launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".loginRegister.LoginActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"
+                  android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+        <activity android:name=".loginRegister.RegisterActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name=".editProfile.EditProfileActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name=".createlive.CreateRoomActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name=".host.HostLiveActivity"
+                  android:windowSoftInputMode="adjustResize"
+                  android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name=".watcher.WatcherLiveActivity"
+                  android:windowSoftInputMode="adjustResize"
+                  android:configChanges="orientation|keyboardHidden|screenSize"/>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="edu.sysu.showtime.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths">
+            </meta-data>
+        </provider>
+
+    </application>
+
+</manifest>
